@@ -18,7 +18,7 @@ public class HomePageTest {
     String website = new BaseUtil().getWebsite();
 
     @BeforeMethod
-    @Given("I am arriving on the Home page")
+    @Given("I arrive on the Home page")
     public void setUp() {
         String key = "webdriver.chrome.driver";
         System.setProperty(key, necessaryItems.getChromeDriverRoute());

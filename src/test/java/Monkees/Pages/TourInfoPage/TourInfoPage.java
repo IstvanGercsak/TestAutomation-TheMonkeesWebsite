@@ -3,7 +3,6 @@ package Monkees.Pages.TourInfoPage;
 import Monkees.Base.NecessaryItems;
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
-import io.cucumber.java.BeforeStep;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -22,7 +21,7 @@ public class TourInfoPage {
 
 
     @BeforeMethod
-    @Given("I am arriving on the Home page for Tour Info")
+    @Given("I arrive on the Home page for Tour Info")
     public void setUp() {
         String key = "webdriver.chrome.driver";
         System.setProperty(key, necessaryItems.getChromeDriverRoute());
