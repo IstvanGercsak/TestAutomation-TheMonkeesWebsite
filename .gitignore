@@ -1,0 +1,7 @@
+# Unused folders
+target
+.gradle
+.idea
+
+# Locally used browser drivers
+driver
