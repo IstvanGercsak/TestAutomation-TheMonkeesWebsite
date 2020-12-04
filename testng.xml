@@ -3,7 +3,11 @@
 <suite name="Suite">
     <test name="Test">
         <classes>
-            <class name="Monkees.SetUp"/>
+            <class name="Monkees.Pages.HomePage.HomePageTest"/>
+            <class name="Monkees.Pages.TourInfoPage.TourInfoPage"/>
+            <class name="Monkees.Pages.BandPage.BandPageTest"/>
+            <class name="Monkees.Pages.MediaPage.MediaPageTest"/>
+            <class name="Monkees.Pages.ContactPage.ContactPageTest"/>
         </classes>
     </test>
 </suite>
