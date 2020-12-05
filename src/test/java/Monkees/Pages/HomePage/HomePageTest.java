@@ -18,7 +18,6 @@ public class HomePageTest {
     String website = new BaseUtil().getWebsite();
 
     @BeforeMethod
-    @Given("I arrive on the Home page")
     public void setUp() {
         String key = "webdriver.chrome.driver";
         System.setProperty(key, necessaryItems.getChromeDriverRoute());
@@ -28,7 +27,6 @@ public class HomePageTest {
     }
 
     @Test
-    @When("I check the navigation URLs")
     public void checkNavigationBar() {
         generalTests.checkHrefForHomeButton(driver);
         generalTests.checkHrefForTourInfoButton(driver);
@@ -38,7 +36,6 @@ public class HomePageTest {
     }
 
     @Test
-    @When("I check the navigation footers")
     public void checkFooterContent() {
         generalTests.checkHrefForFacebookIcon(driver);
         generalTests.checkHrefForTwitterIcon(driver);
@@ -47,7 +44,6 @@ public class HomePageTest {
     }
 
     @AfterMethod
-    @Then("I close the browser")
     public void tearDown() {
         driver.quit();
     }

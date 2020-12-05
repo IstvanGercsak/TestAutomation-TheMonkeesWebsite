@@ -5,4 +5,3 @@
 - Logging
 - CI integration
 - Reporting
-- Integrate Cucumber (ongoing)

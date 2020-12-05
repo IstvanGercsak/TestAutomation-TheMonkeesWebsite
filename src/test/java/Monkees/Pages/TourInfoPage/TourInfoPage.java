@@ -3,9 +3,6 @@ package Monkees.Pages.TourInfoPage;
 import Monkees.Base.NecessaryItems;
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
@@ -21,7 +18,6 @@ public class TourInfoPage {
 
 
     @BeforeMethod
-    @Given("I arrive on the Home page for Tour Info")
     public void setUp() {
         String key = "webdriver.chrome.driver";
         System.setProperty(key, necessaryItems.getChromeDriverRoute());
@@ -31,7 +27,6 @@ public class TourInfoPage {
     }
 
     @Test
-    @When("I navigate to the Tour Info page and check the Tour Info page URLs")
     public void checkNavigationBar() {
         navigationToTourInfoPage(driver);
         generalTests.checkHrefForHomeButton(driver);
@@ -42,7 +37,6 @@ public class TourInfoPage {
     }
 
     @Test
-    @When("I navigate to the Tour Info page and check the Tour Info page footer icons")
     public void checkFooterContent() {
         navigationToTourInfoPage(driver);
         generalTests.checkHrefForFacebookIcon(driver);
@@ -55,7 +49,6 @@ public class TourInfoPage {
         generalTests.navigationToTourInfoPage(driver);
     }
 
-    @Then("I close the Tour Info page test")
     @AfterMethod
     public void tearDown() {
         driver.quit();
