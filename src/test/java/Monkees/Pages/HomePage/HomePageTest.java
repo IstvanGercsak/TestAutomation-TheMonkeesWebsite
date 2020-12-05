@@ -1,29 +1,21 @@
 package Monkees.Pages.HomePage;
 
-import Monkees.Base.NecessaryItems;
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
-import io.cucumber.java.en.Given;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
+
 
 public class HomePageTest {
 
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();
-    NecessaryItems necessaryItems = new NecessaryItems();
-    String website = new BaseUtil().getWebsite();
+    BaseUtil baseUtil = new BaseUtil();
 
+    @Parameters({ "browser","headless" })
     @BeforeMethod
-    public void setUp() {
-        String key = "webdriver.chrome.driver";
-        System.setProperty(key, necessaryItems.getChromeDriverRoute());
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(website);
+    public void setUp(String browser, String headless) {
+       driver = baseUtil.setUpTest(browser, headless);
     }
 
     @Test

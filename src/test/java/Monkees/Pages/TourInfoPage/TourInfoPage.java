@@ -1,29 +1,23 @@
 package Monkees.Pages.TourInfoPage;
 
-import Monkees.Base.NecessaryItems;
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 public class TourInfoPage {
 
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();
-    NecessaryItems necessaryItems = new NecessaryItems();
-    String website = new BaseUtil().getWebsite();
+    BaseUtil baseUtil = new BaseUtil();
 
-
+    @Parameters({"browser", "headless"})
     @BeforeMethod
-    public void setUp() {
-        String key = "webdriver.chrome.driver";
-        System.setProperty(key, necessaryItems.getChromeDriverRoute());
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(website);
+    public void setUp(String browser, String headless) {
+        driver = baseUtil.setUpTest(browser, headless);
     }
 
     @Test
