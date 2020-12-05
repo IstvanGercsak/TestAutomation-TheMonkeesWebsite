@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class ContactPageTest {
+public class ContactPageTest extends ContactPageTestPOM {
 
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();
@@ -20,7 +20,7 @@ public class ContactPageTest {
         driver = baseUtil.setUpTest(browser, headless);
     }
 
-    @Test (priority = 1)
+    @Test
     public void checkNavigationBar() {
         navigationToContactPage(driver);
         generalTests.checkHrefForHomeButton(driver);
@@ -30,13 +30,23 @@ public class ContactPageTest {
         generalTests.checkHrefForContactButton(driver);
     }
 
-    @Test (priority = 2)
+    @Test
     public void checkFooterContent() {
         navigationToContactPage(driver);
         generalTests.checkHrefForFacebookIcon(driver);
         generalTests.checkHrefForTwitterIcon(driver);
         generalTests.checkHrefForYouTubeIcon(driver);
         generalTests.checkHrefForSpotifyIcon(driver);
+    }
+
+    @Test
+    public void inputFieldInteractions() {
+        navigationToContactPage(driver);
+    }
+
+    @Test
+    public void submitButtonIsVisibleAndClickable() {
+        navigationToContactPage(driver);
     }
 
     public void navigationToContactPage(WebDriver driver) {

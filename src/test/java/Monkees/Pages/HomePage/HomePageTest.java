@@ -12,10 +12,10 @@ public class HomePageTest {
     GeneralTests generalTests = new GeneralTests();
     BaseUtil baseUtil = new BaseUtil();
 
-    @Parameters({ "browser","headless" })
+    @Parameters({"browser", "headless"})
     @BeforeMethod
     public void setUp(String browser, String headless) {
-       driver = baseUtil.setUpTest(browser, headless);
+        driver = baseUtil.setUpTest(browser, headless);
     }
 
     @Test
@@ -33,6 +33,11 @@ public class HomePageTest {
         generalTests.checkHrefForTwitterIcon(driver);
         generalTests.checkHrefForYouTubeIcon(driver);
         generalTests.checkHrefForSpotifyIcon(driver);
+    }
+
+    @Test
+    public void imageCheck() {
+        //TODO
     }
 
     @AfterMethod

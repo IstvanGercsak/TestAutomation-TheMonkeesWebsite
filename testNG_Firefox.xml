@@ -6,7 +6,7 @@
     <test name="Tests">
         <classes>
             <class name="Monkees.Pages.HomePage.HomePageTest"/>
-            <class name="Monkees.Pages.TourInfoPage.TourInfoPage"/>
+            <class name="Monkees.Pages.TourInfoPage.TourInfoPageTest"/>
             <class name="Monkees.Pages.BandPage.BandPageTest"/>
             <class name="Monkees.Pages.MediaPage.MediaPageTest"/>
             <class name="Monkees.Pages.ContactPage.ContactPageTest"/>
