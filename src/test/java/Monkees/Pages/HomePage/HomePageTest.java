@@ -2,6 +2,8 @@ package Monkees.Pages.HomePage;
 
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.*;
 
@@ -11,6 +13,7 @@ public class HomePageTest {
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();
     BaseUtil baseUtil = new BaseUtil();
+    Logger logger = LogManager.getLogger(HomePageTest.class);
 
     @Parameters({"browser", "headless"})
     @BeforeMethod

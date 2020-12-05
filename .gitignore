@@ -8,3 +8,6 @@ driver
 
 # Default testNG logger
 test-output
+
+# Log files
+logs

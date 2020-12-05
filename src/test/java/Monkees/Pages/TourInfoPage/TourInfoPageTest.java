@@ -2,6 +2,8 @@ package Monkees.Pages.TourInfoPage;
 
 import Monkees.Pages.Base.BaseUtil;
 import Monkees.Pages.General.GeneralTests;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -15,6 +17,7 @@ public class TourInfoPageTest extends TourInfoPagePOM {
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();
     BaseUtil baseUtil = new BaseUtil();
+    Logger logger = LogManager.getLogger(TourInfoPagePOM.class);
 
     @Parameters({"browser", "headless"})
     @BeforeMethod
