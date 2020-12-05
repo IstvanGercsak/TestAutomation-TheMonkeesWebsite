@@ -5,3 +5,6 @@ target
 
 # Locally used browser drivers
 driver
+
+# Default testNG logger
+test-output

@@ -20,7 +20,7 @@ public class ContactPageTest {
         driver = baseUtil.setUpTest(browser, headless);
     }
 
-    @Test
+    @Test (priority = 1)
     public void checkNavigationBar() {
         navigationToContactPage(driver);
         generalTests.checkHrefForHomeButton(driver);
@@ -30,7 +30,7 @@ public class ContactPageTest {
         generalTests.checkHrefForContactButton(driver);
     }
 
-    @Test
+    @Test (priority = 2)
     public void checkFooterContent() {
         navigationToContactPage(driver);
         generalTests.checkHrefForFacebookIcon(driver);
