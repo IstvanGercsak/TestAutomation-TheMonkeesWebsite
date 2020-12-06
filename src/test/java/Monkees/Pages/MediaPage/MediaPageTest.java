@@ -12,7 +12,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class MediaPageTest extends MediaPageTestPOM {
+public class MediaPageTest extends MediaPagePOM {
 
     WebDriver driver = new BaseUtil().getDriver();
     GeneralTests generalTests = new GeneralTests();

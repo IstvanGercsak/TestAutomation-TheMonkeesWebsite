@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class MediaPageTestPOM {
+public class MediaPagePOM {
 
     // Title
     String lastTrainToClarksVilleTitle = "Last Train to Clarksville";

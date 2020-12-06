@@ -2,6 +2,10 @@
 
 I created a UI test automation framework for one of my website.
 
+# Website
+
+Website link [here](https://istvangercsak.github.io/TheMonkees/)
+
 # Todo
 
 - CI integration
@@ -13,6 +17,7 @@ I created a UI test automation framework for one of my website.
     - Chrome browser
     - Mozilla Firefox browser
 - TestNG
+- Maven
 
 # How to use it
 
