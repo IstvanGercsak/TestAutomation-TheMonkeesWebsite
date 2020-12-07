@@ -73,7 +73,7 @@ mvn test
 
 - Built in Jenkins and testNG reporting function:
 
-![image](assets/test_result_screenshot.png)
+![image](assets/test_result_jenkins.png)
 
 ## Logging
 - log4j logging function
