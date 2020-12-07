@@ -5,6 +5,7 @@ The framework contains:
 - UI Automation with Selenium WebDriver in order to check UI elements on the website
 - Logging function
 - Reporting function
+- CI with Jenkins
 
 # Website
 
@@ -12,6 +13,7 @@ Website link [here](https://istvangercsak.github.io/TheMonkees/)
 
 # Used technologies
 
+- IntelliJ IDEA - Community Edition
 - Java (JDK 14)
 - Selenium WebDriver
     - UI automation API tool in order to control website interactions
@@ -27,8 +29,21 @@ Website link [here](https://istvangercsak.github.io/TheMonkees/)
 
 - Fork the git repository
 - Install the dependencies with the help of the POM
-- Right click on one the testNG runner file
+- Right click on one the testNG runner file / Run
 - Log will create automatically
+
+Before the first run it is necessary to download the most updated drivers for the browsers,
+ as well as to keep the installed browser up to date on our machines. (Based on the given 
+ Operation System which is used for this)
+
+If you are using Mac(as myself) you should put these drivers into the appropriate folders in your project:
+- Chrome driver:
+    - {$Project folder}/driver/chromeDriver_mac/chromedriver
+- Mozilla Firefox(gecko) driver:
+    - {$Project folder}/driver/firefoxDriver_mac/geckodriver
+
+This is one of the disadvantage of this approach as we always have to keep our browsers on the same version and 
+ind the case of a browser update, we have to update the used drivers as well.
 
 # CI integration with jenkins
 
@@ -79,3 +94,5 @@ mvn test
 - log4j logging function
     - It will expand the log file in the "../logs/log.log" file
     - You can see the actual run details in the Jenkins job in each run
+    
+![image](assets/log.png)
