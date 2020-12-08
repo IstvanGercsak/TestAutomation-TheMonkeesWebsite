@@ -1,4 +1,4 @@
-# Test automation mini project
+# Test automation project
 
 I created a UI test automation framework for one of my website called The Monkees official website.
 The framework contains:
@@ -6,6 +6,8 @@ The framework contains:
 - Logging function
 - Reporting function
 - CI with Jenkins
+
+Original project of this website: [link](https://github.com/IstvanGercsak/TheMonkees)
 
 # Website
 
