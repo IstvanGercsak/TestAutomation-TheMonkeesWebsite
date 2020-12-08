@@ -1,6 +1,6 @@
 package Monkees.Pages.TourInfoPage;
 
-import Monkees.Pages.Base.BaseUtil;
+import Monkees.DriverFactory.DriverFactory;
 import Monkees.Pages.General.GeneralTests;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -14,15 +14,15 @@ import org.testng.annotations.Test;
 
 public class TourInfoPageTest extends TourInfoPagePOM {
 
-    WebDriver driver = new BaseUtil().getDriver();
+    WebDriver driver = new DriverFactory().getDriver();
     GeneralTests generalTests = new GeneralTests();
-    BaseUtil baseUtil = new BaseUtil();
+    DriverFactory driverFactory = new DriverFactory();
     Logger logger = LogManager.getLogger(TourInfoPagePOM.class);
 
     @Parameters({"browser", "headless"})
     @BeforeMethod
     public void setUp(String browser, String headless) {
-        driver = baseUtil.setUpTest(browser, headless);
+        driver = driverFactory.setUpTest(browser, headless);
     }
 
     @Test

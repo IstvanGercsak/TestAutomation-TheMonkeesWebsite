@@ -1,11 +1,10 @@
 package Monkees.Pages.ContactPage;
 
-import Monkees.Pages.Base.BaseUtil;
+import Monkees.DriverFactory.DriverFactory;
 import Monkees.Pages.General.GeneralTests;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Parameters;
@@ -13,10 +12,10 @@ import org.testng.annotations.Test;
 
 public class ContactPageTest extends ContactPagePOM {
 
-    WebDriver driver = new BaseUtil().getDriver();
+    WebDriver driver = new DriverFactory().getDriver();
     GeneralTests generalTests = new GeneralTests();
-    BaseUtil baseUtil = new BaseUtil();
     Logger logger = LogManager.getLogger(ContactPageTest.class);
+    DriverFactory driverFactory = new DriverFactory();
 
     final static String testName = "Istvan Gercsak";
     final static String testEmail = "istvan.gercsak@test.com";
@@ -27,7 +26,7 @@ public class ContactPageTest extends ContactPagePOM {
     @Parameters({"browser", "headless"})
     @BeforeMethod
     public void setUp(String browser, String headless) {
-        driver = baseUtil.setUpTest(browser, headless);
+        driver = driverFactory.setUpTest(browser, headless);
     }
 
     @Test

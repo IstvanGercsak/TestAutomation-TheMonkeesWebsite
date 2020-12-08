@@ -1,6 +1,6 @@
 package Monkees.Pages.BandPage;
 
-import Monkees.Pages.Base.BaseUtil;
+import Monkees.DriverFactory.DriverFactory;
 import Monkees.Pages.General.GeneralTests;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,14 +12,14 @@ import org.testng.annotations.Test;
 
 public class BandPageTest extends BandPagePOM {
 
-    WebDriver driver = new BaseUtil().getDriver();
+    WebDriver driver = new DriverFactory().getDriver();
     GeneralTests generalTests = new GeneralTests();
-    BaseUtil baseUtil = new BaseUtil();
+    DriverFactory driverFactory = new DriverFactory();
 
     @Parameters({"browser", "headless"})
     @BeforeMethod
     public void setUp(String browser, String headless) {
-        driver = baseUtil.setUpTest(browser, headless);
+        driver = driverFactory.setUpTest(browser, headless);
     }
 
     @Test
