@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 public class HomePageTest extends HomePagePOM {
 
-    WebDriver driver = new DriverFactory().getDriver();
+    WebDriver driver = new DriverFactory().driver;
     GeneralTests generalTests = new GeneralTests();
     DriverFactory driverFactory = new DriverFactory();
     Logger logger = LogManager.getLogger(HomePageTest.class);

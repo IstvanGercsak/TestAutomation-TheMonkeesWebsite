@@ -14,7 +14,7 @@ import org.testng.annotations.Test;
 
 public class MediaPageTest extends MediaPagePOM {
 
-    WebDriver driver = new DriverFactory().getDriver();
+    WebDriver driver = new DriverFactory().driver;
     GeneralTests generalTests = new GeneralTests();
     DriverFactory driverFactory = new DriverFactory();
     Logger logger = LogManager.getLogger(MediaPageTest.class);

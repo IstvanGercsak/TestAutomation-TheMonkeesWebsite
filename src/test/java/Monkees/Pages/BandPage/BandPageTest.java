@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class BandPageTest extends BandPagePOM {
 
-    WebDriver driver = new DriverFactory().getDriver();
+    WebDriver driver = new DriverFactory().driver;
     GeneralTests generalTests = new GeneralTests();
     DriverFactory driverFactory = new DriverFactory();
 

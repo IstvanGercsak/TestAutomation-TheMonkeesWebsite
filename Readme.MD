@@ -81,7 +81,6 @@ For this I created a Pre Step with the following command:
 
 ```shell script
 cd /Users/istvangercsak/IdeaProjects/Test
-mvn test
 ```
 
 # Reporting and Logging 

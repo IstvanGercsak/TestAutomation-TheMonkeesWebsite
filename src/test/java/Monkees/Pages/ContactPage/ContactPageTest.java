@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 
 public class ContactPageTest extends ContactPagePOM {
 
-    WebDriver driver = new DriverFactory().getDriver();
+    WebDriver driver = new DriverFactory().driver;
     GeneralTests generalTests = new GeneralTests();
     Logger logger = LogManager.getLogger(ContactPageTest.class);
     DriverFactory driverFactory = new DriverFactory();

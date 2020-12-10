@@ -55,9 +55,4 @@ public class DriverFactory {
         driver.get(website);
         return driver;
     }
-
-    public WebDriver getDriver() {
-        return this.driver;
-    }
-
 }
