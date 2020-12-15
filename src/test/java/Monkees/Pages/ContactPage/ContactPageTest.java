@@ -73,18 +73,26 @@ public class ContactPageTest extends ContactPagePOM {
     }
 
     public void checkNameInputField(String name) {
+        nameInputElement(driver).isDisplayed();
+        nameInputElement(driver).clear();
         nameInputElement(driver).sendKeys(name);
     }
 
     public void checkPhoneNumberField(String phoneNumber) {
+        phoneNumberInputElement(driver).isDisplayed();
+        phoneNumberInputElement(driver).clear();
         phoneNumberInputElement(driver).sendKeys(phoneNumber);
     }
 
     public void checkEmailField(String email) {
+        emailInputElement(driver).isDisplayed();
+        emailInputElement(driver).clear();
         emailInputElement(driver).sendKeys(email);
     }
 
     public void checkDescriptionField(String description) {
+        descriptionInputElement(driver).isDisplayed();
+        descriptionInputElement(driver).clear();
         descriptionInputElement(driver).sendKeys(description);
     }
 
